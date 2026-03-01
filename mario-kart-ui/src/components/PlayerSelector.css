@@ -1,0 +1,158 @@
+.selector-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 4rem;
+    min-height: 100vh;
+}
+
+.header-gif {
+    width: 180px;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.6));
+}
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #ffe600;
+    text-shadow: 3px 3px 0 #e50000, 5px 5px 0 #000;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.players-pick {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.pick-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 280px;
+}
+
+.pick-label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.vs-divider {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ffe600;
+    text-shadow: 2px 2px 0 #e50000;
+    align-self: center;
+    padding: 0 0.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    color: #fff;
+}
+
+.card:hover:not(:disabled) {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card.selected-p1 {
+    border-color: #4fc3f7;
+    background: rgba(79, 195, 247, 0.15);
+    box-shadow: 0 0 16px rgba(79, 195, 247, 0.4);
+    transform: translateY(-4px);
+}
+
+.card.selected-p2 {
+    border-color: #ef5350;
+    background: rgba(239, 83, 80, 0.15);
+    box-shadow: 0 0 16px rgba(239, 83, 80, 0.4);
+    transform: translateY(-4px);
+}
+
+.card.taken {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.card-gif {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.card-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+.card-stats {
+    display: flex;
+    gap: 0.3rem;
+    font-size: 0.65rem;
+    color: #ccc;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.start-btn {
+    margin-top: 2.5rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #ffe600, #ff6f00);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(255, 200, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.start-btn:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(255, 200, 0, 0.6);
+}
+
+.start-btn:disabled {
+    background: linear-gradient(135deg, #444, #333);
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}

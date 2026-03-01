@@ -1,0 +1,125 @@
+.result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.result-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4rem;
+    color: #ffe600;
+    text-shadow: 3px 3px 0 #e50000;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.result-players {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.result-vs {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #ffe600;
+    text-shadow: 2px 2px 0 #e50000;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    min-width: 160px;
+    transition: transform 0.2s;
+}
+
+.result-card.winner {
+    border-color: #ffe600;
+    background: rgba(255, 230, 0, 0.1);
+    box-shadow: 0 0 30px rgba(255, 230, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.result-card.loser {
+    opacity: 0.55;
+}
+
+.result-card.draw {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.result-gif {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.result-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+
+.result-points {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #ffe600;
+    margin: 0;
+}
+
+.trophy {
+    font-size: 0.75rem;
+    color: #ffe600;
+    font-weight: 700;
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.draw-msg {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.restart-btn {
+    margin-top: 1rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    background: linear-gradient(135deg, #ffe600, #ff6f00);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(255, 200, 0, 0.4);
+}
+
+.restart-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 30px rgba(255, 200, 0, 0.6);
+}
